@@ -1,0 +1,42 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-form-label">Numero 1:</label>
+                    <input class="form-control" name="Num1" [(ngModel)]="num1" type="number" placeholder="Numero...">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-form-label">Numero 2:</label>
+                    <input class="form-control" name="Num2" [(ngModel)]="num2" type="number" placeholder="Numero...">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label class="control-form-label">Resultado:</label>
+                    <input class="form-control" name="Resultado" [(ngModel)]="resultado" type="text"
+                        placeholder="Numero..." readonly>
+                </div>
+            </div>
+            <div class="row">
+
+         
+            </div>
+        </div>
+        <br><br>
+       
+   <div class="row">
+        <div class="form-group">
+                <label class="control-form-label" style="text-align: center">Operacion:</label>
+                <br>
+                <button class="btn-primary" (click)="calcular('+')">Sumar</button>
+                <button class="btn-primary" (click)="calcular('-')">Restart</button>
+                <button class="btn-primary" (click)="calcular('*')">Multiplicar</button>
+                <button class="btn-primary" (click)="calcular('/')">Dividil</button>
+            </div>
+   </div>
+    
+    </div>
+</div>

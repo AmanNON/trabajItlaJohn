@@ -1,0 +1,60 @@
+<div class="main-content">
+    <div class="container-fluid">
+  <div class="row justify-content-center">
+
+        <div class="card-body">
+        <div>
+          <h4>Registro de clientes</h4>
+        </div>
+          <div *ngIf="errorMsg" class="alert alert-info">
+            <p>{{errorMsg}}</p> 
+          </div>
+          <form [formGroup]="form" (ngSubmit)="insertar()">
+            <div class="form-group">
+              <label class="form-label">Nombre:</label>
+              <input type="text" formControlName="nombre" class="form-control" placeholder="Digite su nombre">
+              <small 
+              class="text-danger"
+              *ngIf="getNombre().invalid && (getNombre().touched || getNombre().dirty)"
+              >Este campo es obligatorio</small>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Apellido:</label>
+                <input type="text" formControlName="apellido" class="form-control" placeholder="Digite su apellido">
+                <small 
+                class="text-danger"
+                *ngIf="getApellido().invalid && (getApellido().touched || getApellido().dirty)"
+                >Este campo es obligatorio</small>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Cedula:</label>
+                <input type="text" formControlName="cedula" class="form-control" placeholder="Digite su cedula">
+                <small 
+                class="text-danger"
+                *ngIf="getCedula().invalid && (getCedula().touched || getCedula().dirty)"
+                >Este campo es obligatorio</small>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Direccion:</label>
+                <input type="text" formControlName="direccion" class="form-control" placeholder="Digite su direccion">
+                <small 
+                class="text-danger"
+                *ngIf="getDireccion().invalid && (getDireccion().touched || getDireccion().dirty)"
+                >Este campo es obligatorio</small>
+              </div>
+            <div class="form-group">
+              <label class="form-label">Estado civil:</label>
+              <input type="text" formControlName="estadocivil" class="form-control" placeholder="Digite su estado civil">
+              <small 
+              class="text-danger"
+              *ngIf="getEstadoCivil().invalid && (getEstadoCivil().touched || getEstadoCivil().dirty)"
+              >Este campo es obligatorio</small>
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Guardar</button>
+            
+         
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

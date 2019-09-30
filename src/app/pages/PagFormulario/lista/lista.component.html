@@ -1,0 +1,14 @@
+<h1>Lista</h1>
+
+<ul class="list-group">
+    <li *ngFor="let p of datos" class="list-group-item">
+        <p>{{p.nombre}} - {{p.apellido}} - {{p.direccion}}</p>
+    </li>
+</ul>
+<p 
+*ngIf="this.datos.length==0; else panel"
+[ngClass]="{'text-danger': this.datos.length==0,'text-primary': !this.datos.length==0}"
+>Lista Vacia</p>
+<ng-template #panel>
+   <h4>Num. Personas {{this.datos.length}}</h4>
+</ng-template>
